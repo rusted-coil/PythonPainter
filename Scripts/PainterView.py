@@ -9,11 +9,11 @@ class PainterView:
         # コマンド領域
         commandFrame = ttk.Frame(mainFrame, width=320)
         commandFrame.pack(anchor=tk.NW, side=tk.LEFT, fill=tk.Y)
-        commandFrame.propagate(0)
+#        commandFrame.propagate(0)
 
         self.Buttons = {}
         
-        testButton = ttk.Button(commandFrame, text='Test')
+        testButton = ttk.Button(commandFrame, text='Reload')
         testButton.pack()
         self.Buttons['Test'] = testButton
 
