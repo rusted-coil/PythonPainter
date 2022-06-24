@@ -1,6 +1,5 @@
 from abc import abstractmethod
 from PIL import Image, ImageDraw, ImageFont
-import os
 
 class SubRect:
     def __init__(self, left, top, right, bottom):
@@ -42,6 +41,12 @@ class SketchBase:
         if not color is None:
             self.Drawer.rectangle(rect.Fill(), fill=color, outline=outline, width=width)
         return rect
+
+    # 線を描画します。
+    def DrawLine(self, start, end, color, width = 0):
+        (sx, sy) = start
+        (ex, ey) = end
+        self.Drawer.line((sx, sy, ex, ey), fill=color, width=width)
 
     # 半透明の四角を描画します。
     def DrawAlphaRectangle(self, rect, color, outline=(0, 0, 0), width=0):

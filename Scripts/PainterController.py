@@ -14,7 +14,7 @@ class PainterController:
         view.SetButtonCommand('Save', self.Save)
 
     def TestCommand(self):
-        cls = ClassUtil.TryGetNamedClass('FF14.FireBall', SketchBase)
+        cls = ClassUtil.TryGetNamedClass('FF14.Shikoku', SketchBase)
         if cls is None:
             print("No SketchBase Class Found")
         else:
